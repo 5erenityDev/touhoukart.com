@@ -54,6 +54,15 @@ export default function Home() {
           />
           Dev's Twitter
         </a>
+        <br/>
+        <div>
+          <h1 className="text-[80%] text-[#AAAAAA] text-center">Touhou Kart is a fan-made modification of the video game Mario Kart DS. Mario Kart DS and all associated trademarks, characters, and assets are the sole property of Nintendo Co., Ltd. This project is not endorsed by or affiliated with Nintendo in any manner.</h1>
+          <br/>
+          <h1 className="text-[80%] text-[#AAAAAA] text-center">The Touhou Project and all associated characters, settings, and lore are the creation and property of Team Shanghai Alice (ZUN). Touhou Kart is a fan-made work created for non-commercial purposes and is not endorsed by or affiliated with Team Shanghai Alice (ZUN).</h1>
+          <br/>
+          <h1 className="text-[80%] text-[#AAAAAA] text-center">Please understand that Touhou Kart is a non-commercial, fan-made project developed by a fan for entertainment purposes only. No profit is being made from this project. Touhou Kart requires users to possess a legally obtained copy of Mario Kart DS for the Nintendo DS. This project is intended for personal use only.</h1>
+          <br/>
+        </div>
       </footer>
     </div>
   );
