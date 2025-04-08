@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Touhou Kart',
     description: "Mario Kart DS Romhack featuring many touhou characters and tracks! ",
     locale: 'en_US',
-    url: 'https://www.wretchedrose.com/',
+    url: 'https://www.touhoukart.com/',
     images: [
       {
         url: '/images/site/kaguya-bald.png',
@@ -65,9 +65,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased text-1xl font-helvetica`}
       >
-        {children}
+        <div className = "min-h-screen bg-[url(/image/site/CheckerBackground.png)] bg-[auto_5vw]">
+          <div className = "flex-grow bg-black mx-[0] lg:mx-[10vw]">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
