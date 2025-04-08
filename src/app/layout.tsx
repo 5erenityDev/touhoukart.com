@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     url: 'https://www.touhoukart.com/',
     images: [
       {
-        url: '/images/site/kaguya-bald.png',
+        url: '/images/site/kaguya-bald.jpg',
         width: 2086, // Optional: Specify width
         height: 2086, // Optional: Specify height
         alt: 'THINNING!!!!', // Optional: Specify alt text
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
     creator: '@Serenity_Dev', // Optional: The creator's Twitter handle
     images: [
       {
-        url: '/images/site/kaguya-bald.png',
+        url: '/images/site/kaguya-bald.jpg',
         width: 2086, // Optional: Specify width
         height: 2086, // Optional: Specify height
         alt: 'THINNING!!!!', // Optional: Specify alt text
@@ -68,10 +71,68 @@ export default function RootLayout({
         className={`antialiased text-1xl font-helvetica`}
       >
         <div className = "min-h-screen bg-[url(/image/site/CheckerBackground.png)] bg-[auto_5vw]">
-          <div className = "flex-grow bg-black mx-[0] lg:mx-[10vw]">
+          <div className = "flex-grow bg-[#131116] mx-[0] lg:mx-[5vw]">
             {children}
+            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+              <a
+                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+                href="https://www.serenitydev.net/mods/mkds"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  aria-hidden
+                  src="/file.svg"
+                  alt="File icon"
+                  width={16}
+                  height={16}
+                />
+                Parent Site
+              </a>
+              <a
+                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+                href="https://bsky.app/profile/serenitydev.net"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  aria-hidden
+                  src="/window.svg"
+                  alt="Window icon"
+                  width={16}
+                  height={16}
+                />
+                Dev's Bluesky
+              </a>
+              <a
+                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+                href="https://x.com/Serenity_Dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  aria-hidden
+                  src="/globe.svg"
+                  alt="Globe icon"
+                  width={16}
+                  height={16}
+                />
+                Dev's Twitter
+              </a>
+              <br/>
+              <br/>
+              <div>
+                <h1 className="text-[80%] text-[#AAAAAA] text-center">Touhou Kart is a fan-made modification of the video game Mario Kart DS. Mario Kart DS and all associated trademarks, characters, and assets are the sole property of Nintendo Co., Ltd. This project is not endorsed by or affiliated with Nintendo in any manner.</h1>
+                <br/>
+                <h1 className="text-[80%] text-[#AAAAAA] text-center">The Touhou Project and all associated characters, settings, and lore are the creation and property of Team Shanghai Alice (ZUN). Touhou Kart is a fan-made work created for non-commercial purposes and is not endorsed by or affiliated with Team Shanghai Alice (ZUN).</h1>
+                <br/>
+                <h1 className="text-[80%] text-[#AAAAAA] text-center">Please understand that Touhou Kart is a non-commercial, fan-made project developed for entertainment purposes only. No profit is being made from this project. Touhou Kart requires users to possess a legally obtained copy of Mario Kart DS for the Nintendo DS. This project is intended for personal use only.</h1>
+                <br/>
+              </div>
+            </footer>
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
