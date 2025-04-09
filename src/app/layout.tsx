@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: 'https://www.touhoukart.com/',
     images: [
       {
-        url: '/images/site/kaguya-bald.png',
+        url: '/images/site/kaguya-bald.jpg',
         width: 500, // Optional: Specify width
         height: 500, // Optional: Specify height
         alt: 'THINNING!!!!', // Optional: Specify alt text
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     creator: '@Serenity_Dev', // Optional: The creator's Twitter handle
     images: [
       {
-        url: '/images/site/kaguya-bald.png',
+        url: '/images/site/kaguya-bald.jpg',
         width: 500, // Optional: Specify width
         height: 500, // Optional: Specify height
         alt: 'THINNING!!!!', // Optional: Specify alt text
@@ -70,7 +70,7 @@ export default function RootLayout({
       <body
         className={`antialiased text-1xl font-helvetica`}
       >
-        <div className = "min-h-screen bg-[url(/image/site/CheckerBackground.png)] bg-[auto_5vw]">
+        <div className = "min-h-screen bg-[url(/images/site/CheckerBackground.png)] bg-[auto_5vw]">
           <div className = "flex-grow bg-[#131116] mx-[0] lg:mx-[5vw]">
             {children}
             <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
