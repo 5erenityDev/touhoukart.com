@@ -27,37 +27,7 @@ export const metadata: Metadata = {
     width: 'device-width',
     initialScale: 1.0,
   },
-  openGraph: {
-    type: 'website',
-    title: 'Touhou Kart',
-    description: "Mario Kart DS Romhack featuring many touhou characters and tracks! ",
-    locale: 'en_US',
-    url: 'https://www.touhoukart.com/',
-    images: [
-      {
-        url: '/images/site/kaguya-bald.png',
-        width: 500, // Optional: Specify width
-        height: 500, // Optional: Specify height
-        alt: 'THINNING!!!!', // Optional: Specify alt text
-      },
-    ],
-    
-  },
-  twitter: {
-    card: 'summary', // Or 'summary', 'app', 'player'
-    title: 'Touhou Kart',
-    description: "Mario Kart DS Romhack featuring many touhou characters and tracks! ",
-    site: '@Serenity_Dev', // Optional: Your website's Twitter handle
-    creator: '@Serenity_Dev', // Optional: The creator's Twitter handle
-    images: [
-      {
-        url: '/images/site/kaguya-bald.png',
-        width: 500, // Optional: Specify width
-        height: 500, // Optional: Specify height
-        alt: 'THINNING!!!!', // Optional: Specify alt text
-      },
-    ],
-  },
+
 };
 
 export default function RootLayout({
@@ -70,10 +40,18 @@ export default function RootLayout({
       <body
         className={`antialiased text-1xl font-helvetica`}
       >
-        <div className = "min-h-screen bg-[url(/images/site/CheckerBackground.png)] bg-[auto_5vw]">
-          <div className = "flex-grow bg-[#131116] mx-[0] lg:mx-[5vw]">
+        <div className = "bg-[url(/images/site/CheckerBackground.png)] bg-repeat-x bg-[auto_100%] bg-fixed min-h-screen">
+          <div className = "flex-grow mx-[0] items-right content-right">
+            <Image
+                aria-hidden
+                src="/images/site/TouhouKartLogo.png"
+                alt="Touhou Kart"
+                style={{ width: '50%', height: 'auto' ,}}
+                width={1200}
+                height={295}
+            />
             {children}
-            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+            <footer className="bg-[#3F1216] row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
               <a
                 className="flex items-center gap-2 hover:underline hover:underline-offset-4"
                 href="https://www.serenitydev.net/mods/mkds"
