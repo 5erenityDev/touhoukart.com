@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: 'https://www.touhoukart.com/',
     images: [
       {
-        url: '/images/site/kaguya-bald.jpg',
+        url: '/images/site/kaguya-bald.png',
         width: 500, // Optional: Specify width
         height: 500, // Optional: Specify height
         alt: 'THINNING!!!!', // Optional: Specify alt text
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     creator: '@Serenity_Dev', // Optional: The creator's Twitter handle
     images: [
       {
-        url: '/images/site/kaguya-bald.jpg',
+        url: '/images/site/kaguya-bald.png',
         width: 500, // Optional: Specify width
         height: 500, // Optional: Specify height
         alt: 'THINNING!!!!', // Optional: Specify alt text
