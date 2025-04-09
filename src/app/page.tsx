@@ -4,7 +4,17 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-end mr-[-10px] gap-16 font-[family-name:var(--font-geist-sans)]">
       <main className="row-start-2 text-center">
-        <div className="bg-[#9E5357] border-solid  border-[#330D22] border-[10px] pr-[500px]">
+                <div className="bg-[#9E5357] border-solid border-[#330D22] border-r-[10px] border-t-[10px] border-b-[10px] text-center relative"> {/* Added relative positioning */}
+          <div className="absolute left-[-390px] top-[-10px] bottom-0 w-[400px]"> {/* Adjust positioning and width as needed */}
+            <Image
+              src="/images/site/TitleButtonEdge.png"
+              alt="" // Alt text should describe the image if it's contentful
+              width={390}
+              height={400}
+              unoptimized
+              style={{ }} // Or 'stretch' depending on the image
+            />
+          </div>
           <h2 className="text-[200%]  py-10">Mario Kart DS Romhack featuring many Touhou characters and tracks!</h2>
           <h2 className="text-[200%]  py-10">Development starting soon!</h2>
           <h2 className="text-[200%]  py-10">Follow SerenityDev on <a className = "underline text-[#222222]" href="https://x.com/Serenity_Dev">Twitter</a> or <a className = "underline text-[#3794E5]" href="https://bsky.app/profile/serenitydev.net">Bluesky</a> to stay updated!</h2>

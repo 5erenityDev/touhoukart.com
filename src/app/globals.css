@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slanted-left-container {
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+}
+
+.slanted-left-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20px; /* Adjust width of the slanted area */
+  background-color: #330D22; /* Match your border color */
+  clip-path: polygon(0 0, 20px 0, 0 20px, 0% 100%); /* Adjust polygon */
+}
+
+/* Adjust padding on the container to make space for the slant */
+.slanted-left-content {
+  padding-left: 20px; /* Should match the width of the pseudo-element */
+}
