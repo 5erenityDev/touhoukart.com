@@ -27,7 +27,37 @@ export const metadata: Metadata = {
     width: 'device-width',
     initialScale: 1.0,
   },
-
+  openGraph: {
+    type: 'website',
+    title: 'Touhou Kart',
+    description: "Mario Kart DS Romhack featuring many touhou characters and tracks! ",
+    locale: 'en_US',
+    url: 'https://www.touhoukart.com/',
+    images: [
+      {
+        url: '/images/site/kaguya-bald.png',
+        width: 500, // Optional: Specify width
+        height: 500, // Optional: Specify height
+        alt: 'THINNING!!!!', // Optional: Specify alt text
+      },
+    ],
+    
+  },
+  twitter: {
+    card: 'summary', // Or 'summary', 'app', 'player'
+    title: 'Touhou Kart',
+    description: "Mario Kart DS Romhack featuring many touhou characters and tracks! ",
+    site: '@Serenity_Dev', // Optional: Your website's Twitter handle
+    creator: '@Serenity_Dev', // Optional: The creator's Twitter handle
+    images: [
+      {
+        url: '/images/site/kaguya-bald.png',
+        width: 500, // Optional: Specify width
+        height: 500, // Optional: Specify height
+        alt: 'THINNING!!!!', // Optional: Specify alt text
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
